@@ -2,7 +2,7 @@
 const firebaseConfig = {
     apiKey: "AIzaSyDwSyBLQy-t9eHfktI91hrzypBolg_G0JI",
     authDomain: "family-chat-musik.firebaseapp.com",
-    databaseURL: "https://family-chat-musik-default-rtdb.firebaseio.com",
+    databaseURL: "https://family-chat-musik-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "family-chat-musik",
     storageBucket: "family-chat-musik.firebasestorage.app",
     messagingSenderId: "85762848411",
