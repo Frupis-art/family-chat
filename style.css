@@ -6,18 +6,19 @@
 
 body {
     font-family: Arial, 'Times New Roman', serif;
-    background-color: #f0f0f0; /* светло-серый фон */
-    color: #1a237e; /* темно-синие буквы */
+    background-color: #f0f0f0;
+    color: #1a237e;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 .chat-container {
-    width: 90%;
+    width: 100%;
     max-width: 800px;
-    height: 90vh;
+    height: 95vh;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -28,48 +29,49 @@ body {
 .chat-header {
     background-color: #3f51b5;
     color: white;
-    padding: 15px 20px;
+    padding: 12px 15px;
     border-radius: 10px 10px 0 0;
     text-align: center;
 }
 
 .chat-header h1 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: bold;
 }
 
 .messages-container {
     flex: 1;
-    padding: 20px;
+    padding: 15px;
     overflow-y: auto;
     background-color: #fafafa;
 }
 
 .message {
-    margin-bottom: 15px;
-    padding: 10px;
+    margin-bottom: 12px;
+    padding: 8px;
     border-bottom: 1px solid #e0e0e0;
 }
 
 .nickname {
     font-weight: bold;
     color: #303f9f;
-    margin-right: 8px;
+    margin-right: 6px;
 }
 
 .message-text {
     color: #1a237e;
     word-wrap: break-word;
+    line-height: 1.4;
 }
 
 .timestamp {
-    font-size: 0.8em;
+    font-size: 0.7em;
     color: #757575;
-    margin-top: 5px;
+    margin-top: 3px;
 }
 
 .input-area {
-    padding: 15px 20px;
+    padding: 12px 15px;
     background-color: white;
     border-top: 1px solid #e0e0e0;
     border-radius: 0 0 10px 10px;
@@ -79,18 +81,19 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    gap: 10px;
+    gap: 8px;
 }
 
 .nickname-btn {
     background-color: #3f51b5;
     color: white;
     border: none;
-    padding: 8px 15px;
-    border-radius: 20px; /* закругленные кнопки */
+    padding: 8px 12px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 0.9em;
+    font-size: 0.85em;
     transition: background-color 0.3s;
+    white-space: nowrap;
 }
 
 .nickname-btn:hover {
@@ -100,19 +103,20 @@ body {
 .current-nickname {
     font-weight: bold;
     color: #303f9f;
+    font-size: 0.9em;
 }
 
 .message-input {
     display: flex;
-    gap: 10px;
+    gap: 8px;
 }
 
 #messageInput {
     flex: 1;
-    padding: 12px 15px;
+    padding: 10px 12px;
     border: 2px solid #c5cae9;
-    border-radius: 25px; /* закругленное поле ввода */
-    font-size: 1em;
+    border-radius: 20px;
+    font-size: 0.9em;
     outline: none;
     transition: border-color 0.3s;
 }
@@ -125,11 +129,12 @@ body {
     background-color: #3f51b5;
     color: white;
     border: none;
-    padding: 12px 25px;
-    border-radius: 25px; /* закругленная кнопка */
+    padding: 10px 20px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 0.9em;
     transition: background-color 0.3s;
+    white-space: nowrap;
 }
 
 .send-btn:hover {
@@ -143,7 +148,7 @@ body {
 
 /* Стили для скроллбара */
 .messages-container::-webkit-scrollbar {
-    width: 6px;
+    width: 4px;
 }
 
 .messages-container::-webkit-scrollbar-track {
@@ -152,9 +157,152 @@ body {
 
 .messages-container::-webkit-scrollbar-thumb {
     background: #c5cae9;
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
 .messages-container::-webkit-scrollbar-thumb:hover {
     background: #3f51b5;
+}
+
+/* 📱 МОБИЛЬНАЯ АДАПТАЦИЯ */
+@media (max-width: 768px) {
+    body {
+        padding: 5px;
+        height: 100vh;
+        display: block;
+    }
+    
+    .chat-container {
+        height: 100vh;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    .chat-header {
+        padding: 10px 12px;
+        border-radius: 0;
+    }
+    
+    .chat-header h1 {
+        font-size: 1.1em;
+    }
+    
+    .messages-container {
+        padding: 10px;
+    }
+    
+    .message {
+        margin-bottom: 10px;
+        padding: 6px;
+    }
+    
+    .nickname {
+        font-size: 0.85em;
+    }
+    
+    .message-text {
+        font-size: 0.9em;
+    }
+    
+    .input-area {
+        padding: 10px 12px;
+    }
+    
+    .nickname-section {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    
+    .nickname-btn {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+    
+    .current-nickname {
+        font-size: 0.85em;
+    }
+    
+    .message-input {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    #messageInput {
+        padding: 8px 12px;
+        font-size: 0.85em;
+        border-radius: 15px;
+    }
+    
+    .send-btn {
+        padding: 8px 12px;
+        font-size: 0.85em;
+        border-radius: 15px;
+        width: 100%;
+    }
+}
+
+/* 📱 АДАПТАЦИЯ ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ */
+@media (max-width: 480px) {
+    .chat-header h1 {
+        font-size: 1em;
+    }
+    
+    .messages-container {
+        padding: 8px;
+    }
+    
+    .message {
+        margin-bottom: 8px;
+        padding: 5px;
+    }
+    
+    .nickname {
+        font-size: 0.8em;
+    }
+    
+    .message-text {
+        font-size: 0.85em;
+    }
+    
+    .timestamp {
+        font-size: 0.65em;
+    }
+    
+    .input-area {
+        padding: 8px 10px;
+    }
+    
+    #messageInput {
+        padding: 7px 10px;
+        font-size: 0.8em;
+    }
+    
+    .send-btn {
+        padding: 7px 10px;
+        font-size: 0.8em;
+    }
+}
+
+/* 📱 ЛАНДШАФТНАЯ ОРИЕНТАЦИЯ */
+@media (max-height: 500px) and (orientation: landscape) {
+    .chat-container {
+        height: 100vh;
+    }
+    
+    .messages-container {
+        flex: 1;
+        max-height: 60vh;
+    }
+    
+    .input-area {
+        padding: 8px 12px;
+    }
+    
+    .message-input {
+        flex-direction: row;
+    }
+    
+    .send-btn {
+        width: auto;
+    }
 }
