@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, 'Times New Roman', serif;
+    background-color: #f0f0f0; /* светло-серый фон */
+    color: #1a237e; /* темно-синие буквы */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-container {
+    width: 90%;
+    max-width: 800px;
+    height: 90vh;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background-color: #3f51b5;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+.chat-header h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.messages-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fafafa;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.nickname {
+    font-weight: bold;
+    color: #303f9f;
+    margin-right: 8px;
+}
+
+.message-text {
+    color: #1a237e;
+    word-wrap: break-word;
+}
+
+.timestamp {
+    font-size: 0.8em;
+    color: #757575;
+    margin-top: 5px;
+}
+
+.input-area {
+    padding: 15px 20px;
+    background-color: white;
+    border-top: 1px solid #e0e0e0;
+    border-radius: 0 0 10px 10px;
+}
+
+.nickname-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.nickname-btn {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px; /* закругленные кнопки */
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.nickname-btn:hover {
+    background-color: #303f9f;
+}
+
+.current-nickname {
+    font-weight: bold;
+    color: #303f9f;
+}
+
+.message-input {
+    display: flex;
+    gap: 10px;
+}
+
+#messageInput {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #c5cae9;
+    border-radius: 25px; /* закругленное поле ввода */
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#messageInput:focus {
+    border-color: #3f51b5;
+}
+
+.send-btn {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px; /* закругленная кнопка */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.send-btn:hover {
+    background-color: #303f9f;
+}
+
+.send-btn:disabled {
+    background-color: #c5cae9;
+    cursor: not-allowed;
+}
+
+/* Стили для скроллбара */
+.messages-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.messages-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+    background: #c5cae9;
+    border-radius: 3px;
+}
+
+.messages-container::-webkit-scrollbar-thumb:hover {
+    background: #3f51b5;
+}
