@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семейный чат</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1>📱 Открытый чат</h1>
+        </header>
+        
+        <div id="messagesContainer" class="messages-container">
+            <!-- Сообщения будут здесь -->
+        </div>
+        
+        <div class="input-area">
+            <div class="nickname-section">
+                <button id="nicknameBtn" class="nickname-btn">Установить ник</button>
+                <span id="currentNickname" class="current-nickname">Гость</span>
+            </div>
+            <div class="message-input">
+                <input type="text" id="messageInput" placeholder="Введите сообщение (до 500 символов)" maxlength="500">
+                <button id="sendBtn" class="send-btn">Отправить</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключаем Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
